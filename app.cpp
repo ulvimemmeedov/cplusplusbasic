@@ -1,20 +1,53 @@
 /*
-    Author ulvimemmeedov
+    Author: ulvimemmeedov
     c++ basic level 
-    ide visual studio code
+
 */
+
 #include <iostream>
 
 using namespace std;
 
+//void hello(); // funksiya prototipi
+/* void factorialFuncksiya(int reqem)
+{
+    int faktorial = 1;
+
+for (int i = 2; i <= reqem; i++)
+    {
+        faktorial *=i;
+    }
+    cout <<"faktorial : " <<faktorial <<endl;
+}
+*/
+/* int toplama (int a, int b, int c)
+{
+    return a + b + c;
+}
+*/
+/* void func (int *ptr) {
+    *ptr = 20;  // sonraki deyer
+    cout << "funksiyan icindeki deyer : " << *ptr <<endl; // deyiskenin deyerini deyisir
+}
+*/
+/* void deyis(int a[] ,int size)
+{
+    for (int i = 0; i < size; i++)
+    {
+        cout << a[i] <<endl;
+    }
+};
+*/
+
 int main()
 {
+    
+    /*
     // hello world
-    /*
     cout << "hello world";
-    */
+
     // data tipleri
-    /*
+   
     int a = 32;
     float b = 3.52;
     double c = 4.546;
@@ -26,9 +59,9 @@ int main()
     cout << "c deyeri : " << c << endl;
     cout << "d deyeri : " << d << endl;
     cout << "e deyeri : " << e << endl;
-    */
+
     // toplama
-    /*
+   
     int a,b,c,toplam = 0;
     a = 4;
     b = 3;
@@ -36,9 +69,9 @@ int main()
     cem = a +b + c;
 
     cout<< "cem : " <<cem<<endl;
-    */
+
     // operatorlar
-    /*
+    
     
     int reqem1 = 10;
     int reqem2 = 4;
@@ -63,9 +96,9 @@ int main()
 
     
     cout<<a;
-    */
+
     // input alma cin ile
-    /*
+  
     int x;
     int y;
     int z;
@@ -74,9 +107,9 @@ int main()
     cin >>x >> y >> z;
 
     cout << "cemi : " << x+y+z <<endl;
-    */
+    
     // stringler
-    /*
+   
     
     string str1 = "stringdi";
     string str2 = "string2";
@@ -87,9 +120,9 @@ int main()
     cout << str2 << endl;
 
     cout << str3 << endl;
-    */
+    
     // if else
-    /*
+   
     string kod = "123456m";
     
     string input;
@@ -104,10 +137,10 @@ int main()
     {
         cout << "sifre yanlisdir yeniden daxil edin";
     }
-    */
+ 
     // if, else if, else
     // kalkulyator
-    /*
+    
     int a, b;
     string proses;
 
@@ -165,10 +198,10 @@ int main()
     {
         cout << proses << " emeller icinde yoxdur ";
     }
-    */
+   
     // operatorlar
-    /*
-     string sys_username = "ulvimemmeedov";
+   
+    string sys_username = "ulvimemmeedov";
     string sys_password = "123456";
     
     string username,password;
@@ -195,9 +228,9 @@ int main()
     {
         cout << "username ve parol sehvdir";
     }
-    */
+    
     // while
-    /*
+    
     
     int i = 1;
     int j = 1;
@@ -208,11 +241,9 @@ int main()
         i++;
         j++;
     }  
-    */
-
+    
     // do while
-
-    /*
+    
     string pass ="123456";
     string input;
 
@@ -228,18 +259,17 @@ int main()
     } while (input != pass);
     
     cout << "sifre duzgundur" <<endl;
-   */
+  
     // for
-    /*
+   
     for (int i = 1; i < 10; i++)
   {
      cout << "i : " << i <<endl;
   };
   
-    */
+   
     //    faktorial
-
-    /*
+ 
         int reqem;
     cout << "reqem : ";
     cin >> reqem;
@@ -253,9 +283,9 @@ int main()
     
      cout<<"faktorial : " << faktorial <<endl;
     
-    */
+   
     // break
-    /*
+  
     int i = 0;
 
     while (i<10)
@@ -267,9 +297,9 @@ int main()
         cout <<"i : " << i <<endl;
         i++;
     }
-    */
+
     // continue
-    /*
+    
      for (int i = 0; i < 10; i++)
      {
          if (i == 3 || i == 5)
@@ -279,8 +309,8 @@ int main()
          cout <<"i : " <<i <<endl;
          
      }
-     */
-    /*
+    
+   
     string sys_username = "ulvimemmeedov";
     string sys_password = "123456";
 
@@ -313,9 +343,9 @@ int main()
             cout << "username ve parol sehvdir" <<endl;
         }
     }
-   */
+   
     // arraylar
-    /*
+
     int array[3];
 
     array[0] = 10;
@@ -349,7 +379,143 @@ int main()
     cout << "arr " << matris[0][2] <<endl;
     cout << "arr " << matris[1][2] <<endl;
     cout << "arr " << matris[2][2] <<endl;
+
+       int matris[3][3] = {{1, 2, 3},{4, 5, 6},{7, 8,9}};
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+             
+             cout << matris[i][j] << " ";
+
+            }
+            cout <<endl;
+        }
+
+        int matrix[3][3];
+
+        cout << "deyerleri girin : " <<endl;
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                cin >> matrix[i][j];
+            }
+            
+        }
+        
+        cout << "deyerler: " <<endl;
+
+        for (int i = 0; i < 3; i++)
+        {
+            for (int j = 0; j < 3; j++)
+            {
+                cout << matrix[i][j] << " ";
+            }
+            cout <<endl;
+        }            
+    
+    // switch case
+ 
+    int proses;
+
+    cout << "prosesler 1,2 " <<endl;
+    
+    cout << "prosesi daxil edin : "
+    
+    cin >> proses;
+    
+    switch(proses) {
+        case 1:
+    // code block
+    
+    break; 
+    
+        case 2:
+     // code block
+
+    break;
+    
+        default:
+        cout << "duzgun prosesi daxil edin : " <<endl;
+   
+    // funksiyalar
+
+    hello();
+    int reqemesas;
+    
+    cout << "reqemi yazin : ";
+    
+    cin >> reqemesas;
+
+    factorialFuncksiya(reqemesas);
+    
+
+    int a = toplama(1,2,3);
+
+    cout <<"a: " <<a <<endl;
+   
+    // pointerler
+    
+    int a = 5;
+
+    int *ptr = &a;
+
+    *ptr = 6;
+
+    cout<<"a deyeri : " << a <<endl;  
+
+    cout<<"a adresi : " << &a <<endl;  
+
+    cout<<"ptr adresi : " << ptr <<endl;  
+
+    cout<<"a ptr deyeri adresi : " << *ptr <<endl;  
+
+
+    
+    int a = 5; // ilkin deyer
+    
+    cout << "a : " << a <<endl;
+    
+    func(&a);
+    
+    cout << "a : " << a <<endl;  // sonraki deyer
+   
+    int arr[] = {1,2,3,4};
+
+    cout << arr <<endl;// ramdaki adress
+
+    cout << arr + 1 <<endl; // ramdaki adres plus 4 bit
+ 
+    cout << arr + 2 <<endl;   // ramdaki adress plus 8 bit
+    
+    int *ptr = arr;
+
+    cout << ptr <<endl;
+    
+    cout << ptr + 1 <<endl; // ramdaki adres plus 4 bit
+
+    int arr[] = {1, 2, 3, 4};
+
+    int *ptr = &arr[1];
+
+    cout << ptr;
+    arr[6] = 55;
+    cout << arr[6] << endl;
+    
+    int a[] = {1,2,3,4,5,6};
+
+    deyis(a,6);
+
     */
+    
 
     return 0;
 }
+
+// void hello ()
+// {
+//     cout << "hello"<<endl;
+// }

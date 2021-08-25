@@ -1,3 +1,8 @@
+/*
+    Author ulvimemmeedov
+    c++ basic level 
+    ide visual studio code
+*/
 #include <iostream>
 
 using namespace std;
@@ -345,7 +350,6 @@ int main()
     cout << "arr " << matris[1][2] <<endl;
     cout << "arr " << matris[2][2] <<endl;
     */
-   
 
     return 0;
 }

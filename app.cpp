@@ -38,10 +38,75 @@ for (int i = 2; i <= reqem; i++)
     }
 };
 */
+/*
 
+void printArray(const int *ptr1,const int *ptr2) // pointerin isare etdiyi yer deyisir deyeri deyismir
+{       
+    for (;ptr1 != ptr2;ptr1++)
+    {
+        cout << "Element: " << *ptr1 <<endl;
+          
+    }
+    
+}   
+*/
+/*
+// structer
+struct Employe
+{
+   int id;
+   string name;
+   string departament;
+};
+*/
+/*
+//struct
+void showPointer(Employee* employee)
+{
+    // obyekt deyeri deyisir ramda eyni yeri tutur
+
+    employee -> id = 13;
+    cout << "point id : " << employee -> id << endl;
+    cout << "point name : " << employee -> name << endl;
+    cout << "point departament : " << employee -> departament << endl;
+}
+void showEmployee(Employee employee)
+{
+     // obyekt kopyalanir elave yer tutur
+    employee.id = 14;
+    cout << "id : " << employee.id << endl;
+    cout << "name : " << employee.name << endl;
+    cout << "departament : " << employee.departament << endl;
+}
+*/
+/*
+// ic ice structur
+struct Address
+{
+    string cityname;
+    int NO;
+};
+
+
+struct Employee
+{
+    int id;
+    string name;
+    string departament;
+    Address adress;
+};
+// ic ice structur pointer
+struct Employee
+{
+    int id;
+    string name;
+    string departament;
+    Address* address;
+};
+*/
 int main()
 {
-    
+
     /*
     // hello world
     cout << "hello world";
@@ -509,8 +574,62 @@ int main()
 
     deyis(a,6);
 
-    */
+
+    // pointer deyeri
+    int arr[] = {10,20,30,40,50,60,70,80,90,100};
+   
+    printArray(arr+2,arr+7);
+
+    // structer
+    Employe employe1;
+
+    employe1.id = 12;
+    employe1.name = "ulvi memmedov";
+    employe1.departament = "IT";
     
+    // cout << employe1.name <<endl;
+    Employe* ptd = &employe1;
+
+    cout << &ptd->departament;
+
+    // structur point ve referans methoda parametr yollama
+    showEmployee(employee);
+
+    showPointer(&employee);
+
+     // ic ice structu
+    Employee employee = {1, "ulvi memmedov", "IT",{"baki",5}};
+
+    cout << "id : " << employee.id <<endl;
+    cout << "name : " << employee.name <<endl;
+    cout << "departament : " << employee.departament <<endl;
+    cout << "cityname : " << employee.adress.cityname <<endl;
+    cout << "NO : " << employee.adress.NO <<endl;
+    
+    // ic ice structur pointer
+    Employee employee;
+
+    employee.id = 1;
+
+    employee.name = "ulvi memmedov";
+    
+    employee.departament = "IT";
+
+    Address adress = {"Baki",3};
+
+    employee.address = &adress;
+
+    Employee* ptr = &employee;
+
+    cout << ptr->address->cityname <<endl;
+    cout << ptr->address->NO <<endl;
+
+    // sizeof
+    cout << sizeof(int) << endl;
+    cout << sizeof(char) << endl;
+    cout << sizeof(double) << endl;
+    cout << sizeof(float) << endl;
+    */
 
     return 0;
 }
